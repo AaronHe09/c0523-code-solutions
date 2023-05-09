@@ -21,10 +21,10 @@ student.previousOccupation = 'Frac Operator';
 console.log('Value of livesInIrvine: ', student.livesInIrvine);
 console.log('Value of previousOccupation: ', student.previousOccupation);
 
-vehicle.color = 'Silver';
-vehicle.isConvertible = false;
-console.log('Value of color: ', vehicle.color);
-console.log('Value of isConvertible: ', vehicle.isConvertible);
+vehicle['color'] = 'Silver';
+vehicle['isConvertible'] = false;
+console.log('Value of color: ', vehicle['color']);
+console.log('Value of isConvertible: ', vehicle['isConvertible']);
 console.log('Value of vehicle: ', vehicle);
 
 delete pet.name;
