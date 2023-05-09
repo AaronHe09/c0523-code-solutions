@@ -74,5 +74,3 @@ const orderHistory = [
     ],
   },
 ];
-
-console.log(orderHistory[0].itemsDetail[0].total);
