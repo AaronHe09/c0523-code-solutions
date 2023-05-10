@@ -9,7 +9,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 - What is a method?
   a function that is a property of an object
 - How is a method different from any other function?
-  a method is a property of an object which a function is not.
+  a method is a property of an object while a function is not.
 - How do you remove the last element from an array?
   pop method
 - How do you round a number down to the nearest integer?
