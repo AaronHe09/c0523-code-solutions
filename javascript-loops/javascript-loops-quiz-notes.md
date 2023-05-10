@@ -11,17 +11,17 @@ After completing this exercise, you should be able to discuss or answer the foll
 - What does "iteration" mean in the context of loops?
   how many times times its ran so far
 - _When_ does the **condition** expression of a `while` loop get evaluated?
-  before the loop
+  before running the block of code
 - _When_ does the **initialization** expression of a `for` loop get evaluated?
-  before the loop
+  before running the block of code
 - _When_ does the **condition** expression of a `for` loop get evaluated?
-  before the loop
+  before the running the block of code
 - _When_ does the **final** expression of a `for` loop get evaluated?
   after running the code block
 - Besides a `return` statement, which exits its entire function block, which keyword exits a loop before its **condition** expression evaluates to `false`?
   break
 - What does the `++` increment operator do?
-  it adds one to the value
+  it adds one to the current value
 - How do you iterate through the keys of an object?
   for in loop
 
