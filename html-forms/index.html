@@ -12,6 +12,9 @@
       li {
         list-style-type: none;
       }
+      fieldset {
+        border: 0;
+      }
     </style>
   </head>
   <body>
@@ -37,21 +40,23 @@
             </select>
           </li>
         </ul>
+      </fieldset>
 
-        <div>
-          <h3>Favorite Language (choose one)</h3>
-          <label for="html">HTML</label>
-          <input type="radio" name="language" id="html" value="html" />
-          <label for="css">CSS</label>
-          <input type="radio" name="language" id="css" value="css" />
-          <label for="javascript">Javascript</label>
-          <input
-            type="radio"
-            name="language"
-            id="javascript"
-            value="javascript" />
-        </div>
+      <fieldset>
+        <h3>Favorite Language (choose one)</h3>
+        <label for="html">HTML</label>
+        <input type="radio" name="language" id="html" value="html" />
+        <label for="css">CSS</label>
+        <input type="radio" name="language" id="css" value="css" />
+        <label for="javascript">Javascript</label>
+        <input
+          type="radio"
+          name="language"
+          id="javascript"
+          value="javascript" />
+      </fieldset>
 
+      <fieldset>
         <div>
           <h3>would you like to sign up for more information?</h3>
           <input type="checkbox" id="check" name="signup" value="yes" />
