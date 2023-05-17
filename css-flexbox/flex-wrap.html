@@ -7,9 +7,17 @@
     <title>CSS Flexbox - flex-wrap</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="pokemon.css" />
-    <link rel="stylesheet" href="flex-wrap.css" />
     <style>
       /* your styles here 👇 */
+      #card-deck {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .card-wrapper {
+        flex-basis: calc(100% / 6);
+        padding: 5px;
+      }
     </style>
   </head>
   <body>

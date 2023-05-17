@@ -7,9 +7,18 @@
     <title>CSS Flexbox - align-items</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="pokemon.css" />
-    <link rel="stylesheet" href="align-items.css" />
     <style>
       /* your styles here 👇 */
+      #card-deck {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card-wrapper {
+        flex-basis: calc(100% / 3);
+      }
     </style>
   </head>
   <body>
