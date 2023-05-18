@@ -25,10 +25,18 @@ img {
   flex-basis: calc(100% / 4);
 }
 
+#container .row:nth-child(4) .column-one-half:first-child {
+  flex-basis: 66%;
+}
+
 #container .row:nth-child(4) .column-one-half:last-child {
-  width: 600px;
+  flex-basis: 33%;
+}
+
+#container .row:nth-child(5) .column-one-half:first-child {
+  flex-basis: 33%;
 }
 
 #container .row:nth-child(5) .column-one-half:last-child {
-  width: 600px;
+  flex-basis: 66%;
 }
