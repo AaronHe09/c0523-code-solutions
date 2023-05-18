@@ -20,7 +20,11 @@ img {
 }
 
 #container .row:nth-child(2) .column-one-third {
-  width: calc(100% / 3);
+  flex-basis: calc(100% / 3);
+}
+
+#container .row:nth-child(3) .column-one-fourth {
+  flex-basis: calc(100% / 4);
 }
 
 #container .row:nth-child(4) .column-one-half:last-child {
