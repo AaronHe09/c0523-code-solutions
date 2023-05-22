@@ -1,0 +1,236 @@
+/* stylelint-disable no-descending-specificity */
+* {
+  font-family: avenir, monospace;
+}
+
+body {
+  padding: 30px;
+}
+
+/* 1st row */
+
+header {
+  border-bottom: 2px solid;
+  border-color: rgb(243, 243, 243);
+  margin-bottom: 80px;
+}
+
+.row {
+  display: flex;
+}
+
+.row:first-child {
+  justify-content: space-between;
+  padding: 0 150px 10px;
+  margin-bottom: 80px;
+}
+
+/* first row logo */
+
+img {
+  width: 65%;
+}
+
+header .column-one-half:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* first row list */
+
+.directory-list li {
+  list-style: none;
+  display: inline;
+  margin-left: 75px;
+  color: rgb(165, 165, 165);
+  font-family: avenir, monospace;
+  font-size: 20px;
+}
+
+.directory-list li:last-child {
+  margin-left: 50px;
+}
+
+.directory-list li:hover {
+  cursor: pointer;
+}
+
+#header-button {
+  background-color: rgb(41, 68, 100);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* second row list */
+
+.row:nth-child(2) {
+  background-image: url('images/hero.jpg');
+  background-position: center;
+  background-size: cover;
+  margin: 0 150px;
+  color: white;
+  height: 750px;
+  position: relative;
+}
+
+/* second row gradient */
+
+.gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 50px 800px 50px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* second row text */
+.gradient h1 {
+  font-family: 'Tiempos Headline', monospace;
+  font-size: 50px;
+}
+
+.gradient p {
+  font-size: 20px;
+  line-height: 33px;
+}
+
+/* second row button */
+
+.get-started-button {
+  background-color: rgb(41, 68, 100);
+  color: white;
+  font-size: 20px;
+  padding: 15px 50px;
+  margin-top: 30px;
+  border-radius: 5px;
+  width: 250px;
+  border: none;
+  cursor: pointer;
+}
+
+/* third row */
+.row:nth-child(3) {
+  background-color: rgb(250, 250, 250);
+  color: rgb(110, 110, 110);
+}
+
+.row:nth-child(3) .column-full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 70px 0;
+}
+
+/* third row header */
+
+.row-header {
+  width: 500px;
+  text-align: center;
+}
+
+.row-header p {
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+
+/* third row list */
+
+.list-location {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+}
+
+.list-location li {
+  list-style: none;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+/* fourth row */
+
+.row:nth-child(4) {
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 150px;
+  color: rgb(110, 110, 110);
+}
+
+/* fourth row button */
+
+.get-started-button-two {
+  background-color: rgb(41, 68, 100);
+  font-size: 20px;
+  color: white;
+  padding: 15px 50px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* fifth row */
+
+.row:nth-child(5) {
+  background-color: rgb(82, 83, 81);
+  padding: 150px;
+  color: white;
+  line-height: 35px;
+}
+
+/* fifth row image */
+
+.logo-wrapper-two {
+  margin-bottom: 70px;
+  margin-right: 500px;
+}
+
+/* fifth row p */
+
+.column-one-third p {
+  font-size: 18px;
+}
+
+/* fifth row list */
+
+.column-one-third li {
+  list-style: none;
+  margin-bottom: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.column-one-third ul:first-child {
+  margin-right: 200px;
+}
+
+/* sixth row */
+
+.row:nth-child(6) {
+  padding: 50px 150px;
+  background-color: rgb(250, 250, 250);
+}
+
+/* sixth row list */
+
+.row:nth-child(6) ul {
+  padding: 0;
+  margin: 0;
+}
+
+.row:nth-child(6) li {
+  list-style: none;
+  font-size: 20px;
+  display: inline;
+  margin-right: 50px;
+  cursor: pointer;
+}
