@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+p {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+span {
+  padding: 5px 0;
+  font-family: monospace;
+}
+
+.underline {
+  border-bottom: 3px solid black;
+}
+
+.right {
+  color: rgb(140, 209, 35);
+}
+
+.wrong {
+  color: red;
+  border-bottom: 3px solid red;
+}
