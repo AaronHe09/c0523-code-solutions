@@ -78,7 +78,7 @@ function renderPokemon(pokemon) {
 
   $columnOneThird.setAttribute('class', 'column-third');
   $pokemonCard.setAttribute('class', 'pokemon-card');
-  $pokemonTextCard.setAttribute('class', 'pokemon-text-card');
+  $pokemonTextCard.setAttribute('class', 'pokemon-card-text');
 
   $image.src = pokemon.imageUrl;
   $h2.textContent = pokemon.name;
