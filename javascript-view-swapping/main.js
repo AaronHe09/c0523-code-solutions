@@ -6,8 +6,10 @@ $tabContainer.addEventListener('click', function (e) {
   if (e.target.matches('.tab')) {
     const dataView = e.target.getAttribute('data-view');
 
+    console.log(e.target);
+    console.log($tab[0]);
     for (let i = 0; i < $tab.length; i++) {
-      if (e.target.textContent === $tab[i].textContent) {
+      if (e.target === $tab[i]) {
         $tab[i].className = 'tab active';
       } else {
         $tab[i].className = 'tab';
