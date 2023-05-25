@@ -7,5 +7,7 @@ taskList.addEventListener('click', function (e) {
   console.log('Event Tag Name: ', e.target.tagName);
   console.log('Closest: ', closest);
 
-  closest.remove();
+  if (e.target.tagName === 'BUTTON') {
+    closest.remove();
+  }
 });
