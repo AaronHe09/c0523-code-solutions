@@ -1,0 +1,60 @@
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-family: 'Brandon Grotesque', 'Courier New', Courier, monospace;
+  letter-spacing: 0.5px;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(235, 153, 0);
+}
+
+fieldset div {
+  margin: 15px 0;
+}
+
+label {
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+
+input {
+  height: 30px;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 6px;
+  border-color: gray;
+  padding: 20px 10px;
+}
+
+select {
+  height: 40px;
+  width: 100%;
+  padding: 5px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+button {
+  float: right;
+  border: none;
+  border-radius: 20px;
+  width: 80px;
+  padding: 8px;
+  font-size: 12px;
+  color: white;
+  background-color: rgb(255, 94, 0);
+}
