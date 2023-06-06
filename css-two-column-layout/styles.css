@@ -1,0 +1,58 @@
+* {
+  font-family: Karla, monospace;
+}
+
+header {
+  text-align: center;
+  font-weight: 700;
+  font-size: 52px;
+}
+
+#container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.row {
+  display: flex;
+  margin: 50px auto;
+}
+
+.row:first-child {
+  width: 60%;
+}
+
+.row p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.row:first-child p {
+  text-align: center;
+}
+
+.column-one-half {
+  display: flex;
+  padding-right: 70px;
+}
+
+.text-wrapper {
+  padding: 25px 0 0 10px;
+}
+
+.column-full {
+  margin: 0 auto;
+}
+
+button {
+  background-color: white;
+  color: rgb(209, 77, 71);
+  font-weight: bold;
+  font-size: 17px;
+  border-color: rgb(209, 77, 71);
+  border: 1px solid;
+  width: 200px;
+  height: 40px;
+}
