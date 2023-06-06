@@ -1,0 +1,49 @@
+* {
+  font-family: Lato, monospace;
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+body {
+  background-color: rgb(27, 134, 191);
+}
+
+header {
+  font-size: 47px;
+  font-weight: 500;
+}
+
+img {
+  width: 50%;
+}
+
+p {
+  line-height: 25px;
+}
+
+#container {
+  margin: 60px auto;
+  max-width: 1400px;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.column-one-third {
+  flex-basis: 33%;
+  padding: 60px;
+}
+
+.image {
+  background-color: white;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
