@@ -15,3 +15,15 @@ xhr.addEventListener('load', function () {
   }
 });
 xhr.send();
+
+const temp = new XMLHttpRequest();
+temp.open(
+  'GET',
+  'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1'
+);
+temp.responseType = 'json';
+temp.send();
+temp.addEventListener('load', function () {
+  console.log(temp.status);
+  console.log(temp);
+});
