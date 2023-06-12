@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        padding: 0;
+      }
+      li {
+        list-style-type: none;
+      }
+      fieldset {
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="post">
+      <fieldset>
+        <h1>Coding Form!</h1>
+        <ul>
+          <li>
+            <p><label for="mail">Email:</label></p>
+            <input type="email" id="mail" name="user_email" />
+          </li>
+          <li>
+            <p><label for="question">Why is coding cool?</label></p>
+            <select name="question" id="question">
+              <option value="select an option">selection an option</option>
+              <option value="because its interesting">
+                because its interesting
+              </option>
+              <option value="because its fun">because its fun</option>
+              <option value="because its powerful">because its powerful</option>
+            </select>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <h3>Favorite Language (choose one)</h3>
+        <label for="html">HTML</label>
+        <input type="radio" name="language" id="html" value="html" />
+        <label for="css">CSS</label>
+        <input type="radio" name="language" id="css" value="css" />
+        <label for="javascript">Javascript</label>
+        <input
+          type="radio"
+          name="language"
+          id="javascript"
+          value="javascript" />
+      </fieldset>
+
+      <fieldset>
+        <div>
+          <h3>would you like to sign up for more information?</h3>
+          <input type="checkbox" id="check" name="signup" value="yes" />
+          <label for="check">Sign me up!</label>
+        </div>
+        <div>
+          <p><label for="text">comment:</label></p>
+          <textarea name="comment" id="text" cols="30" rows="10"></textarea>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
