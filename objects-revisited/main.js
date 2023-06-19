@@ -11,7 +11,7 @@ const business = {
     },
     Raul: {
       position: 'Salesman',
-      daysOfWeekWorking: ['Mon', 'Wed'],
+      daysOfWeekWorking: ['Mon', 'Wed', 'Fri'],
     },
   },
 };
@@ -34,7 +34,7 @@ function addEmployees() {
       business.employees[employee] = {
         position: job[i],
         daysOfWeekWorking: [],
-        fullTime: null,
+        fullTime: false,
       };
       const workingDays = business.employees[employee].daysOfWeekWorking;
 
@@ -52,8 +52,6 @@ function addEmployees() {
       // shows if employee is fulltime
       if (workingDays.length === 5) {
         business.employees[employee].fullTime = true;
-      } else {
-        business.employees[employee].fullTime = false;
       }
 
       // updates total employees
@@ -70,6 +68,16 @@ function deleteEmployee(employeeName) {
 
 addEventListener('DOMContentLoaded', function () {
   addWeekends();
+
+  for (const employee in business.employees) {
+    const currentEmp = business.employees[employee];
+    currentEmp.fullTime = false;
+
+    if (currentEmp.daysOfWeekWorking.length === 5) {
+      currentEmp.fullTime = true;
+    }
+  }
+
   addEmployees();
   deleteEmployee('Raymond');
 });
