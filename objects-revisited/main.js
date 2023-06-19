@@ -2,12 +2,16 @@ const api = new XMLHttpRequest();
 const business = {
   opens: '6:00 AM',
   closes: '7:00 PM',
-  totalEmployees: 1,
+  totalEmployees: 2,
   daysOpen: ['Mon', 'Wed', 'Fri'],
   employees: {
     Raymond: {
       position: 'CEO',
-      daysOfWeekWorking: ['Mon', 'Fri', 'Sat', 'Sun'],
+      daysOfWeekWorking: ['Mon', 'Fri'],
+    },
+    Raul: {
+      position: 'Salesman',
+      daysOfWeekWorking: ['Mon', 'Wed'],
     },
   },
 };
