@@ -5,8 +5,9 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - What is JSX?
-
+  It allows you to write HTML in react
 - How does React use JSX to render components?
+  SX converts HTML tags into react elements
 
 ## Notes
 
