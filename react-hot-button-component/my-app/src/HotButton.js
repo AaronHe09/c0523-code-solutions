@@ -9,34 +9,30 @@ const colors = [
   '#FFFF1B',
   '#FFFFFF',
 ];
-let c = 0;
-let fontColor = -1;
 
 export default function HotButton() {
   let [count, setCount] = useState(0);
-  let [i, setI] = useState(0);
+  let [fontColor, setFontColor] = useState(-1);
+  const color = handleOnClick();
 
   function handleOnClick() {
-    c++;
-    setCount(c);
-
-    if (c === 0) {
-      return;
-    } else if (c % 3 === 0) {
-      setI(i + 1);
+    if (count === 12) {
+      setFontColor(0);
     }
 
-    if (c === 12) {
-      fontColor = 0;
-    }
+    if (count < 3) return colors[0];
+    if (count < 6) return colors[1];
+    if (count < 9) return colors[2];
+    if (count < 12) return colors[3];
+    if (count < 15) return colors[4];
   }
 
   return (
     <div>
       <button
-        onClick={handleOnClick}
+        onClick={() => setCount(count + 1)}
         style={{
-          backgroundColor: colors[i],
+          backgroundColor: color,
           color: colors.at(fontColor),
           padding: '.5rem',
           marginRight: '1rem',
