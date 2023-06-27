@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 export default function RegistrationFormControlled() {
-  let [username, setUsername] = useState('');
-  let [password, setPassword] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -15,15 +15,11 @@ export default function RegistrationFormControlled() {
     <form id="form2" onSubmit={(e) => handleSubmit(e)}>
       <label>
         Username
-        <input
-          onChange={(e) => setUsername(e.target.value)}
-          value={username}></input>
+        <input onChange={(e) => setUsername(e.target.value)} value={username} />
       </label>
       <label>
         Password
-        <input
-          onChange={(e) => setPassword(e.target.value)}
-          value={password}></input>
+        <input onChange={(e) => setPassword(e.target.value)} value={password} />
       </label>
       <button type="submit">Submit</button>
     </form>

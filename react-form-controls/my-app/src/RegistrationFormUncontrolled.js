@@ -1,8 +1,8 @@
 export default function RegistrationFormUncontrolled() {
   function handleSubmit(e) {
     e.preventDefault();
-    const form = document.querySelector('#form');
-    const formData = new FormData(form);
+
+    const formData = new FormData(e.target);
     const value = [...formData.entries()];
     const object = {
       username: value[0][1],
@@ -15,11 +15,11 @@ export default function RegistrationFormUncontrolled() {
     <form onSubmit={(e) => handleSubmit(e)} id="form">
       <label>
         Username:
-        <input name="username"></input>
+        <input name="username" />
       </label>
       <label>
         Password
-        <input name="password"></input>
+        <input name="password" />
       </label>
       <button type="submit">Submit</button>
     </form>
