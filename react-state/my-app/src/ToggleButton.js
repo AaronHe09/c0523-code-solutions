@@ -6,7 +6,7 @@ export default function ToggleButton({ text, color }) {
 
   function handleClick() {
     console.log(isClicked);
-    setIsClicked(true);
+    setIsClicked(!isClicked);
     console.log(isClicked);
   }
 
