@@ -1,3 +1,3 @@
-export default function Banner({ text }) {
-  return <p>{text}</p>;
+export default function Banner({ index }) {
+  return <p>{index}</p>;
 }

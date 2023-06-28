@@ -1,3 +1,3 @@
-export default function NavigationButton({ text }) {
-  return <button>{text}</button>;
+export default function NavigationButton({ text, handler }) {
+  return <button onClick={handler}>{text}</button>;
 }

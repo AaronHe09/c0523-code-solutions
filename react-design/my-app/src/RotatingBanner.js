@@ -6,12 +6,38 @@ import { useState } from 'react';
 export default function RotatingBanner({ items }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  function handleButtonsOnClick(e) {
+    const int = parseInt(e.target.textContent);
+    setCurrentIndex(int);
+    console.log(e);
+  }
+
+  function handleDecrement() {
+    if (currentIndex === 0) {
+      return;
+    } else {
+      setCurrentIndex(currentIndex - 1);
+    }
+  }
+
+  function handleIncrement() {
+    if (currentIndex === items.length - 1) {
+      return;
+    } else {
+      setCurrentIndex(currentIndex + 1);
+    }
+  }
+
   return (
     <div>
-      <Banner text={items[currentIndex]} />
-      <NavigationButton text={'Prev'} />
-      <IndexButtons items={items} />
-      <NavigationButton text={'Next'} />
+      <Banner index={items[currentIndex]} />
+      <NavigationButton text={'Prev'} handler={handleDecrement} />
+      <IndexButtons
+        items={items}
+        handleOnClick={handleButtonsOnClick}
+        index={currentIndex}
+      />
+      <NavigationButton text={'Next'} handler={handleIncrement} />
     </div>
   );
 }
