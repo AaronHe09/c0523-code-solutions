@@ -1,3 +1,3 @@
-export default function Banner({ items }) {
-  return <p>{items[0]}</p>;
+export default function Banner({ text }) {
+  return <p>{text}</p>;
 }
