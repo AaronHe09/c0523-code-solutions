@@ -6,7 +6,7 @@ export default function IndexButtons({ items, handleOnClick, index }) {
       {items.map((item) => (
         <button
           key={item}
-          onClick={handleOnClick}
+          onClick={() => handleOnClick(items.indexOf(item))}
           className="index-button"
           style={{
             backgroundColor:

@@ -6,9 +6,8 @@ import { useState } from 'react';
 export default function RotatingBanner({ items }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  function handleButtonsOnClick(e) {
-    const int = parseInt(e.target.textContent);
-    setCurrentIndex(int);
+  function handleButtonsOnClick(index) {
+    setCurrentIndex(index);
   }
 
   function handleDecrement() {
