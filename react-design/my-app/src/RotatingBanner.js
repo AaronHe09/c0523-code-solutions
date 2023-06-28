@@ -9,7 +9,6 @@ export default function RotatingBanner({ items }) {
   function handleButtonsOnClick(e) {
     const int = parseInt(e.target.textContent);
     setCurrentIndex(int);
-    console.log(e);
   }
 
   function handleDecrement() {
