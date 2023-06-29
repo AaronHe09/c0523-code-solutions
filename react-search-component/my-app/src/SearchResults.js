@@ -9,9 +9,14 @@ export default function SearchResults({ array, searchValue }) {
     const newArray = array.filter((string) =>
       string.toLowerCase().includes(searchValue.toLowerCase())
     );
-    return newArray.map((string) => (
-      <li key={newArray.indexOf(string)}>{string}</li>
-    ));
+
+    if (newArray.length === 0) {
+      return <p>No items match the filter</p>;
+    } else {
+      return newArray.map((string) => (
+        <li key={newArray.indexOf(string)}>{string}</li>
+      ));
+    }
   }
 
   return <ul>{searchValue.length > 0 ? renderSearchValue() : renderAll()}</ul>;
