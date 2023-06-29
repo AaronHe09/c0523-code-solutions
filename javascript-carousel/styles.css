@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  border: 3px solid black;
+  padding: 50px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin-top: 50px;
+}
+
+li {
+  list-style: none;
+}
+
+.image {
+  margin: 0 250px;
+}
+
+i {
+  cursor: pointer;
+}
