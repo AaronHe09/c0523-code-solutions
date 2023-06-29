@@ -11,7 +11,6 @@ export default function ValidatedInput() {
     const textValue = e.target.value;
     setText(textValue);
   }
-
   return (
     <label>
       Password
