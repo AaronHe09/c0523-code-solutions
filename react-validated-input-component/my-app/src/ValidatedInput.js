@@ -19,7 +19,7 @@ export default function ValidatedInput() {
         <input
           type="text"
           onChange={(e) => handleOnChange(e)}
-          size="8"
+          size="10"
           required
         />
         <FontAwesomeIcon
