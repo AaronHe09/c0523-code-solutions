@@ -1,0 +1,317 @@
+    1  git switch css-layout-classes
+    2  git add .
+    3  git commit -m 'updated flex-basis'
+    4  git push origin css-layout-classes
+    5  git add .
+    6  git commit -m 'removed flex for container'
+    7  git push origin css-layout-classes
+    8  git add .
+    9  git commit -m 'changed width to flex-basis'
+   10  git push origin css-layout-classes
+   11  git switch main
+   12  git branch css-three-column-layout
+   13  git switch css-three-column-layout
+   14  git add .
+   15  git commit -m 'completed css-three-column-layout'
+   16  git push origin css-three-column-layout
+   17  git switch main
+   18  git branch css-two-column-layout
+   19  git switch css-two-column-layout
+   20  git add .
+   21  git commit -m 'completed css-two-column-layout'
+   22  git add origin css-two-column-layout
+   23  git push  origin css-two-column-layout
+   24  git swtich main
+   25  git switch main
+   26  git branch css-positioning
+   27  gitt switch css-poisitioning
+   28  git switch css-poisitioning
+   29  git switch css-positioning
+   30  git add .
+   31  git commit -m 'completed css-positioning'
+   32  git push origin css-positioning
+   33  git switch mian
+   34  git switch main
+   35  git branch css-cascade
+   36  git switch css-cascade
+   37  git add .
+   38  git commit -m 'completed css-cascade'
+   39  git push origin css-cascade
+   40  git switch main
+   41  git branch css-positioning
+   42  git switch css-positioning
+   43  git branch css-canvas-medical
+   44  git switch css-canvas-medical
+   45  git switch main
+   46  git switch css-canvas-medical
+   47  git add .
+   48  git commit -m 'completed css-cavnas-medical'
+   49  git add .
+   50  git commit -m 'completed css-canvas-medical'
+   51  git push origin css-canvas-medical
+   52  git switch main
+   53  git branch dom-querying
+   54  git switch dom-querying
+   55  git add .
+   56  git commit -m 'completed dom-querying'
+   57  git push origin dom-querying
+   58  git add .
+   59  git commit -m ''
+   60  git push origin dom-querying
+   61  git add .
+   62  git commit -m 'md'
+   63  git push origin dom-querying
+   64  git switch css-canvas-medical
+   65  git add .
+   66  git commit -m 'fixed'
+   67  git push origin css-canvas-medical
+   68  git switch main
+   69  git branch dom-events
+   70  git switch dom-events
+   71  git add .
+   72  git commit -m 'completed'
+   73  git push origin dom-events
+   74  git switch main
+   75  git swiitch dom-events
+   76  git switch dom-events
+   77  git switch main
+   78  git branch domp-manipulation
+   79  git branch -D domp-manipulation
+   80  git branch dom-manipulation
+   81  git switch dom-manipulation
+   82  git add .
+   83  git commit -m 'completed dom-manipulation'
+   84  git push origin dom-manipulation
+   85  git switch main
+   86  git switch main
+   87  git branch javascript-and-json
+   88  git switch javascript-and-json
+   89  git add .
+   90  git commit -m 'completed javsascript-and-json'
+   91  git push origin javascript-and-json
+   92  git switch main
+   93  git branch javascript-local-storage
+   94  git switch javascript-local-storage
+   95  git add .
+   96  git commit -m 'completed javascript-local-storage'
+   97  git push origin javascript-local-storage
+   98  git switch main
+   99  git branch es6-template-literals
+  100  git switch es6-template-literals
+  101  git add .
+  102  git commit -m 'completed es6-template-literals'
+  103  git push origin es6-template-literals
+  104  git add .
+  105  git commit -m 'removed space'
+  106  git push origin es6-template-literals
+  107  git switch main
+  108  git branch javascript-timers
+  109  git switch javascript-timers
+  110  git add .
+  111  git commit -m 'completed javascript-times'
+  112  git push origin javascript-timers
+  113  git swith main
+  114  git switch main
+  115  git switch main
+  116  git pull origin main
+  117  git branch react-validated-input-component
+  118  git switch react-validated-input-component
+  119  cd react-validated-input-component
+  120  npx create-react-app
+  121  npx create-react-app my-app
+  122  cd my-app
+  123  npm start
+  124  cd react-search-component
+  125  git add .
+  126  git commit -m 'completed react search component'
+  127  git push origin react-search-component
+  128  git switch main
+  129  git branch react-accordion-component
+  130  git switch react-accordion-component
+  131  cd react-accordion-component
+  132  npx create-react-app my-app
+  133  cd ..
+  134  cd react-accordion-component
+  135  npx create-react-app my-app
+  136  cd my-app
+  137  npm start
+  138  git switch main
+  139  git switch react-search-component
+  140  git switch main
+  141  git status
+  142  git switch react-search-component
+  143  git switch main
+  144  git switch react-accordion-component
+  145  git switch react-serach-component
+  146  git switch react-search-component
+  147  switch react-validated-input-component
+  148  git status
+  149  git switch react-validated-input-component
+  150  git status
+  151  git status
+  152  git add .
+  153  git commit -m 'completed react-validated-input-component'
+  154  git push origin react-validated-input-component
+  155  git switch react-accordion-component
+  156  cd react-accordion-component
+  157  npx create-react-app my-app
+  158  cd my-app
+  159  npm start
+  160  cd my-app
+  161  npm start
+  162  cd ..
+  163  cd react-accordion-component
+  164  cd my-app
+  165  npm start
+  166  npm start
+  167  npm start
+  168  npm start
+  169  cd ..
+  170  git add .
+  171  git commit -m 'completed react-accordion-component'
+  172  git push origin react-accordion-component
+  173  cd ..
+  174  git switch main
+  175  git status
+  176  git switch react-search-component
+  177  cd react-search-component
+  178  cd my-app
+  179  npm start
+  180  cd ..
+  181  git add .
+  182  git commit -m 'added styling'
+  183  git push origin react-search-component
+  184  cd my-app
+  185  npm start
+  186  git switch main
+  187  cd react-validated-input-component
+  188  npm i --save @fortawesome/fontawesome-svg-core
+  189  npm i --save @fortawesome/free-solid-svg-icons
+  190  npm i --save @fortawesome/react-fontawesome@latest
+  191  npm i --save @fortawesome/free-regular-svg-icons
+  192  npm i --save @fortawesome/free-brands-svg-icons
+  193  npm i --save @fortawesome/free-solid-svg-icons
+  194  git add .
+  195  git commit -m 'completed react validated input component'
+  196  git add .
+  197  git commit -m 'added additional css'
+  198  git push origin react-validated-input-component
+  199  cd ..
+  200  git switch main
+  201  git branch react-serach-component
+  202  git switch react-search-component
+  203  git branch -d react-serach-component
+  204  git branch react-search-component
+  205  git switch react-search-component
+  206  cd react-search-component 
+  207  npx create-react-app
+  208  npx create-react-app my-app
+  209  cd my-app
+  210  npm start
+  211  git branch command-line-basics
+  212  git switch command-line-basics
+  213  cd command-line-basics
+  214  man man
+  215  man cat
+  216  man cat
+  217  man cat
+  218  man cat hubris.txt
+  219  man cat
+  220  man cat impatience.txt
+  221  cat hubris.txt
+  222  cat impatience.txt
+  223  cat laziness.txt
+  224  cat hubris.txt impatience.txt laziness.txt
+  225  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  226  cat three-virtues.txt
+  227  man ls
+  228  man ls
+  229  ls
+  230  ls -a
+  231  man ls
+  232  ~ls -F
+  233  ls F
+  234  ls -F
+  235  ls lfz-staff
+  236  ls -a lfz-staff
+  237  ls -F lfz-staff
+  238  lf man
+  239  man lf
+  240  man ls
+  241  ls -aF lfz-staff > lfz-staff/contents.txt
+  242  cat contents.txt
+  243  cat lfz-staff/contents.txt
+  244  man ls
+  245  cat
+  246  ls
+  247  cat and-ten.txt
+  248  cat and-then.txt
+  249  man pwd
+  250  pwd
+  251  pwd > i-was-here.txt
+  252  ls
+  253  cat i-was-here.txt
+  254  man echo
+  255  man echo
+  256  echo hello world
+  257  echo 'Hello, World!'
+  258  echo Hello, World!
+  259  echo 'Hello, World!' > hello.txt
+  260  ls
+  261  cat hello.txt
+  262  man cat
+  263  man touch
+  264  man touch
+  265  touch tag-you're-it.txt
+  266  man touch
+  267  touch tag-youre-it.txt
+  268  man touch
+  269  touch snoot/boop.txt
+  270  ls snoot
+  271  man mkdir
+  272  man mkdir
+  273  mkdir parent
+  274  ls parent
+  275* m
+  276  ls paren
+  277  man mkdir
+  278  mkdir -p parent/child
+  279  mkdir parent/child
+  280  mkdir parent/childs
+  281  man mkdir
+  282  mkdir parent/child
+  283  mkdir -p parent/child
+  284  mkdir -p parent/child/grandchild
+  285  touch .gitkeep > parent/child/grandchild
+  286  touch .gitkeep parent/child/grandchild
+  287  touch .gitkeep > parent/child/grandchild
+  288  touch .gitkeep > parent/child/grandchild
+  289  touch .gitkeep parent
+  290  touch .gitkeep /parent
+  291  touch hi.txt
+  292  touch .gitkeep ./parent
+  293  touch /parent/child/grandchild/.gitkeep
+  294  touch ./parent/child/grandchild/.gitkeep
+  295  ls -a grnadchild
+  296  ls -a grandchild
+  297  ls -a ./parent/child/grandchild
+  298  man mv
+  299  mv pokiemans pokemon
+  300  ls pokemon
+  301  man rm
+  302  man rm
+  303  rm lol.txt
+  304  man rm
+  305  rm -r kill-me
+  306  man cp
+  307  cp and-then.txt no-and-then.txt
+  308  man history
+  309  history
+  310  ls history
+  311  ls and-then.txt
+  312  ls no-and-then.txt
+  313  cat and-then.txt
+  314  cat no-and-then.txt
+  315  history
+  316  touch command-history.txt
+  317  history > command-history.txt
