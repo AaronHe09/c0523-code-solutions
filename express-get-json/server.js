@@ -22,9 +22,6 @@ const grades = {
 };
 const app = express();
 
-app.listen(8080, () => {
-  console.log('Listening to 8080');
-});
 app.get('/api/grades', (req, res) => {
   const array = [];
 
@@ -32,6 +29,9 @@ app.get('/api/grades', (req, res) => {
     array.push(grades[grade]);
   }
 
-  const arrayJSON = res.json(array);
-  res.send(arrayJSON);
+  res.json(array);
+});
+
+app.listen(8080, () => {
+  console.log('Listening to 8080');
 });
