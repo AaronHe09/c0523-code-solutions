@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+svg {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.menu-container {
+  transform: translateX(-300px);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  background-color: white;
+  width: 300px;
+  height: 100vh;
+  padding: 1rem;
+  pointer-events: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.open {
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
