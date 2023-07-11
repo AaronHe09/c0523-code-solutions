@@ -7,87 +7,103 @@ app.use(express.json());
 
 // gets a list of notes in an array
 app.get('/api/notes', async (req, res) => {
-  const data = await fetchFile();
-  const array = [];
+  try {
+    const data = await fetchFile();
+    const array = [];
 
-  for (const note in data.notes) {
-    array.push(data.notes[note]);
+    for (const note in data.notes) {
+      array.push(data.notes[note]);
+    }
+    res.status(200).json(array);
+  } catch (error) {
+    res.status(500).json({ error: 'Error reading file' });
+    console.error(error);
   }
-  res.status(200).json(data);
 });
 
 // gets a single note by id
 app.get('/api/notes/:id', async (req, res) => {
-  const data = await fetchFile();
-  const id = req.params.id;
+  try {
+    const data = await fetchFile();
+    const id = req.params.id;
 
-  if (idErrorHandler(id, data, res)) {
-    idErrorHandler(id, data, res);
-    return;
+    if (idErrorHandler(id, data, res)) return;
+    res.status(200).json(data.notes[id]);
+  } catch (error) {
+    res.status(500).json({ error: 'Error reading file' });
+    console.log(error);
   }
-  res.status(200).json(data.notes[id]);
 });
 
 // post a new note
 app.post('/api/notes', async (req, res) => {
-  const data = await fetchFile();
-  const body = req.body;
-  const id = data.nextId;
-
-  if (Object.keys(body).length === 0) {
-    res.status(400).json({ error: 'content is a required field' });
-    return;
-  }
-
   try {
-    body.id = data.nextId;
-    data.notes[id] = body;
-    data.nextId++;
-    await writeFileDataJson(data);
-    res.status(201).json(body);
+    const data = await fetchFile();
+    const body = req.body;
+    const id = data.nextId;
+
+    if (Object.keys(body).length === 0) {
+      res.status(400).json({ error: 'content is a required field' });
+      return;
+    }
+
+    try {
+      body.id = data.nextId;
+      data.notes[id] = body;
+      data.nextId++;
+      await writeFileDataJson(data);
+      res.status(201).json(body);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'An unexpected error occurred.' });
+    }
   } catch (error) {
+    res.status(500).json({ error: 'Error reading file' });
     console.error(error);
-    res.status(500).json({ error: 'An unexpected error occurred.' });
   }
 });
 
 // delete note
 app.delete('/api/notes/:id', async (req, res) => {
-  const data = await fetchFile();
-  const id = req.params.id;
-
-  if (idErrorHandler(id, data, res)) {
-    idErrorHandler(id, data, res);
-    return;
-  }
   try {
-    delete data.notes[id];
-    await writeFileDataJson(data);
-    res.sendStatus(204);
+    const data = await fetchFile();
+    const id = req.params.id;
+
+    if (idErrorHandler(id, data, res)) return;
+    try {
+      delete data.notes[id];
+      await writeFileDataJson(data);
+      res.sendStatus(204);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'An unexpected error occurred.' });
+    }
   } catch (error) {
+    res.status(500).json({ error: 'Error reading file' });
     console.error(error);
-    res.status(500).json({ error: 'An unexpected error occurred.' });
   }
 });
 
 // replace a note
 app.put('/api/notes/:id', async (req, res) => {
-  const data = await fetchFile();
-  const id = req.params.id;
-  const body = req.body;
-
-  if (idErrorHandler(id, data, res)) {
-    idErrorHandler(id, data, res);
-    return;
-  }
   try {
-    body.id = id;
-    data.notes[id] = body;
-    await writeFileDataJson(data);
-    res.status(200).json(body);
+    const data = await fetchFile();
+    const id = req.params.id;
+    const body = req.body;
+
+    if (idErrorHandler(id, data, res)) return;
+    try {
+      body.id = id;
+      data.notes[id] = body;
+      await writeFileDataJson(data);
+      res.status(200).json(body);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'An unexpected error occurred.' });
+    }
   } catch (error) {
+    res.status(500).json({ error: 'Error reading file' });
     console.error(error);
-    res.status(500).json({ error: 'An unexpected error occurred.' });
   }
 });
 
@@ -97,13 +113,9 @@ app.listen(8080, () => {
 
 // parses data.json and returns it
 async function fetchFile() {
-  try {
-    const notes = await readFile('data.json', 'utf8');
-    const notesParsed = JSON.parse(notes);
-    return notesParsed;
-  } catch (error) {
-    console.error(error);
-  }
+  const notes = await readFile('data.json', 'utf8');
+  const notesParsed = JSON.parse(notes);
+  return notesParsed;
 }
 
 // checks to see if id isNaN, negative or if the id note exists
