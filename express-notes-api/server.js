@@ -2,7 +2,6 @@ import express from 'express';
 import { readFile, writeFile } from 'node:fs/promises';
 
 const app = express();
-const dataArray = await fetchFile();
 
 app.use(express.json());
 
@@ -30,7 +29,7 @@ app.get('/api/notes/:id', async (req, res) => {
 app.post('/api/notes', async (req, res) => {
   const data = await fetchFile();
   const body = req.body;
-  const dataId = dataArray.nextId;
+  const id = data.nextId;
 
   if (Object.keys(body).length === 0) {
     res.status(400).send({ error: 'content is a required field' });
@@ -39,7 +38,7 @@ app.post('/api/notes', async (req, res) => {
 
   try {
     body.id = data.nextId;
-    data.notes[dataId] = body;
+    data.notes[id] = body;
     data.nextId++;
     await writeFile('data.json', JSON.stringify(data));
     res.status(201).send(body);
