@@ -40,7 +40,7 @@ app.post('/api/notes', async (req, res) => {
     body.id = data.nextId;
     data.notes[id] = body;
     data.nextId++;
-    await writeFile('data.json', JSON.stringify(data));
+    await writeFileDataJson(data);
     res.status(201).send(body);
   } catch (error) {
     console.error(error);
@@ -56,7 +56,7 @@ app.delete('/api/notes/:id', async (req, res) => {
   idErrorHandler(id, data, res);
   try {
     delete data.notes[id];
-    await writeFile('data.json', JSON.stringify(data));
+    await writeFileDataJson(data);
     res.sendStatus(204);
   } catch (error) {
     console.error(error);
@@ -74,7 +74,7 @@ app.put('/api/notes/:id', async (req, res) => {
   try {
     body.id = id;
     data.notes[id] = body;
-    await writeFile('data.json', JSON.stringify(data));
+    await writeFileDataJson(data);
     res.status(200).send(body);
   } catch (error) {
     console.error(error);
@@ -110,4 +110,8 @@ function idErrorHandler(id, data, res) {
   if (!data.notes[id]) {
     res.status(404).send(`cannot find note with id ${id}`);
   }
+}
+
+async function writeFileDataJson(data) {
+  await writeFile('data.json', JSON.stringify(data));
 }
