@@ -9,10 +9,6 @@ app.use(express.json());
 // gets a list of notes in an array
 app.get('/api/notes', async (req, res) => {
   const data = await fetchFile();
-
-  if (data.length === 0) {
-    res.status(400).send([]);
-  }
   const array = [];
 
   for (const note in data.notes) {
