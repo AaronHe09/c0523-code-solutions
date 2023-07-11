@@ -21,7 +21,10 @@ app.get('/api/notes/:id', async (req, res) => {
   const data = await fetchFile();
   const id = req.params.id;
 
-  idErrorHandler(id, data, res);
+  if (idErrorHandler(id, data, res)) {
+    idErrorHandler(id, data, res);
+    return;
+  }
   res.status(200).send(data.notes[id]);
 });
 
@@ -53,7 +56,10 @@ app.delete('/api/notes/:id', async (req, res) => {
   const data = await fetchFile();
   const id = req.params.id;
 
-  idErrorHandler(id, data, res);
+  if (idErrorHandler(id, data, res)) {
+    idErrorHandler(id, data, res);
+    return;
+  }
   try {
     delete data.notes[id];
     await writeFileDataJson(data);
@@ -70,7 +76,10 @@ app.put('/api/notes/:id', async (req, res) => {
   const id = req.params.id;
   const body = req.body;
 
-  idErrorHandler(id, data, res);
+  if (idErrorHandler(id, data, res)) {
+    idErrorHandler(id, data, res);
+    return;
+  }
   try {
     body.id = id;
     data.notes[id] = body;
@@ -101,14 +110,15 @@ async function fetchFile() {
 function idErrorHandler(id, data, res) {
   if (isNaN(id)) {
     res.status(400).send({ error: 'not a number' });
-    return;
+    return true;
   }
   if (id < 0) {
     res.status(400).send({ error: 'id must be a positive number' });
-    return;
+    return true;
   }
   if (!data.notes[id]) {
     res.status(404).send(`cannot find note with id ${id}`);
+    return true;
   }
 }
 
