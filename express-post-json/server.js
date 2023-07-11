@@ -18,10 +18,14 @@ app.get('/api/grades', (req, res) => {
 app.post('/api/grades', (req, res) => {
   const body = req.body;
 
-  body.id = nextId;
-  grades[nextId] = body;
-  nextId++;
-  res.status(201).send(body);
+  if (Object.keys(body).length !== 0) {
+    body.id = nextId;
+    grades[nextId] = body;
+    nextId++;
+    res.status(201).send(body);
+  } else {
+    res.status(400).send('no data provided');
+  }
 });
 
 app.listen(8080, () => {
