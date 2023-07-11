@@ -13,7 +13,7 @@ app.get('/api/notes', async (req, res) => {
   for (const note in data.notes) {
     array.push(data.notes[note]);
   }
-  res.status(200).send(array);
+  res.status(200).json(data);
 });
 
 // gets a single note by id
@@ -25,7 +25,7 @@ app.get('/api/notes/:id', async (req, res) => {
     idErrorHandler(id, data, res);
     return;
   }
-  res.status(200).send(data.notes[id]);
+  res.status(200).json(data.notes[id]);
 });
 
 // post a new note
@@ -35,7 +35,7 @@ app.post('/api/notes', async (req, res) => {
   const id = data.nextId;
 
   if (Object.keys(body).length === 0) {
-    res.status(400).send({ error: 'content is a required field' });
+    res.status(400).json({ error: 'content is a required field' });
     return;
   }
 
@@ -44,10 +44,10 @@ app.post('/api/notes', async (req, res) => {
     data.notes[id] = body;
     data.nextId++;
     await writeFileDataJson(data);
-    res.status(201).send(body);
+    res.status(201).json(body);
   } catch (error) {
     console.error(error);
-    res.status(500).send({ error: 'An unexpected error occurred.' });
+    res.status(500).json({ error: 'An unexpected error occurred.' });
   }
 });
 
@@ -66,7 +66,7 @@ app.delete('/api/notes/:id', async (req, res) => {
     res.sendStatus(204);
   } catch (error) {
     console.error(error);
-    res.status(500).send({ error: 'An unexpected error occurred.' });
+    res.status(500).json({ error: 'An unexpected error occurred.' });
   }
 });
 
@@ -84,10 +84,10 @@ app.put('/api/notes/:id', async (req, res) => {
     body.id = id;
     data.notes[id] = body;
     await writeFileDataJson(data);
-    res.status(200).send(body);
+    res.status(200).json(body);
   } catch (error) {
     console.error(error);
-    res.status(500).send({ error: 'An unexpected error occurred.' });
+    res.status(500).json({ error: 'An unexpected error occurred.' });
   }
 });
 
@@ -109,15 +109,15 @@ async function fetchFile() {
 // checks to see if id isNaN, negative or if the id note exists
 function idErrorHandler(id, data, res) {
   if (isNaN(id)) {
-    res.status(400).send({ error: 'not a number' });
+    res.status(400).json({ error: 'not a number' });
     return true;
   }
   if (id < 0) {
-    res.status(400).send({ error: 'id must be a positive number' });
+    res.status(400).json({ error: 'id must be a positive number' });
     return true;
   }
   if (!data.notes[id]) {
-    res.status(404).send(`cannot find note with id ${id}`);
+    res.status(404).json(`cannot find note with id ${id}`);
     return true;
   }
 }
