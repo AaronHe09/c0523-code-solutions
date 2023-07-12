@@ -34,18 +34,10 @@ app.get('/api/notes/:id', async (req, res, next) => {
     const data = await readData();
     const id = Number(req.params.id);
     if (Number.isNaN(id) || !Number.isInteger(id) || id < 1) {
-      try {
-        throw new ClientError(400, 'id must be a positive integer');
-      } catch (err) {
-        next(err);
-      }
+      throw new ClientError(400, 'id must be a positive integer');
     }
     if (data.notes[id] === undefined) {
-      try {
-        throw new ClientError(404, `Cannot find note with id ${id}`);
-      } catch (err) {
-        next(err);
-      }
+      throw new ClientError(404, `Cannot find note with id ${id}`);
     }
     res.json(data.notes[id]);
   } catch (err) {
@@ -57,11 +49,7 @@ app.post('/api/notes', async (req, res, next) => {
   try {
     const { content } = req.body;
     if (content === undefined) {
-      try {
-        throw new ClientError(400, 'content is required field');
-      } catch (err) {
-        next(err);
-      }
+      throw new ClientError(400, 'content is required field');
     }
     const data = await readData();
     const note = {
@@ -81,19 +69,11 @@ app.delete('/api/notes/:id', async (req, res, next) => {
   try {
     const id = Number(req.params.id);
     if (Number.isNaN(id) || !Number.isInteger(id) || id < 1) {
-      try {
-        throw new ClientError(400, `id must be a positive integer`);
-      } catch (err) {
-        next(err);
-      }
+      throw new ClientError(400, `id must be a positive integer`);
     }
     const data = await readData();
     if (data.notes[id] === undefined) {
-      try {
-        throw new ClientError(404, `cannot find note with id ${id}`);
-      } catch (err) {
-        next(err);
-      }
+      throw new ClientError(404, `cannot find note with id ${id}`);
     }
     delete data.notes[id];
     await writeData(data);
@@ -107,27 +87,15 @@ app.put('/api/notes/:id', async (req, res, next) => {
   try {
     const id = Number(req.params.id);
     if (Number.isNaN(id) || !Number.isInteger(id) || id < 1) {
-      try {
-        throw new ClientError(400, `id must be a positive integer`);
-      } catch (err) {
-        next(err);
-      }
+      throw new ClientError(400, `id must be a positive integer`);
     }
     const { content } = req.body;
     if (content === undefined) {
-      try {
-        throw new ClientError(400, 'content is required field');
-      } catch (err) {
-        next(err);
-      }
+      throw new ClientError(400, 'content is required field');
     }
     const data = await readData();
     if (data.notes[id] === undefined) {
-      try {
-        throw new ClientError(404, `cannot find note with id ${id}`);
-      } catch (err) {
-        next(err);
-      }
+      throw new ClientError(404, `cannot find note with id ${id}`);
     }
     const note = {
       id,
