@@ -1,10 +1,11 @@
-import { FaLessThan, FaGreaterThan } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLessThan, faGreaterThan } from '@fortawesome/free-solid-svg-icons';
 
 export default function NavigationButton({ text, onClick }) {
   if (text === 'less') {
-    return <FaLessThan onClick={onClick} />;
+    return <FontAwesomeIcon icon={faLessThan} onClick={onClick} />;
   }
   if (text === 'greater') {
-    return <FaGreaterThan onClick={onClick} />;
+    return <FontAwesomeIcon icon={faGreaterThan} onClick={onClick} />;
   }
 }

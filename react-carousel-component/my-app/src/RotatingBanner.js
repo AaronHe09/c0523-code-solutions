@@ -2,10 +2,18 @@ import NavigationButton from './NavigationButton';
 import IndexButtons from './IndexButtons';
 import Banner from './Banner';
 import './RotatingBanner.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export default function RotatingBanner({ items }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleIncrement = useCallback(() => {
+    if (currentIndex === items.length - 1) {
+      setCurrentIndex(0);
+    } else {
+      setCurrentIndex(currentIndex + 1);
+    }
+  }, [currentIndex, items]);
 
   useEffect(() => {
     const id = setInterval(handleIncrement, 3000);
@@ -26,19 +34,11 @@ export default function RotatingBanner({ items }) {
     }
   }
 
-  function handleIncrement() {
-    if (currentIndex === items.length - 1) {
-      setCurrentIndex(0);
-    } else {
-      setCurrentIndex(currentIndex + 1);
-    }
-  }
-
   return (
     <div className="container">
       <div className="wrapper">
         <NavigationButton text={'less'} onClick={handleDecrement} />
-        <Banner index={items[currentIndex]} />
+        <Banner path={items[currentIndex]} />
         <NavigationButton text={'greater'} onClick={handleIncrement} />
       </div>
       <IndexButtons

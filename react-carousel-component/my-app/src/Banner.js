@@ -1,3 +1,3 @@
-export default function Banner({ index }) {
-  return <img src={index} alt={index} />;
+export default function Banner({ path }) {
+  return <img src={path} alt={path} />;
 }
