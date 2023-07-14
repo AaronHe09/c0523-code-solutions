@@ -11,7 +11,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 - What is a row?
   a horizontal list of data with the same attributes
 - What is an attribute and what other names are used to describe them?
-  an attribute is are labels for data types with related values. anothe word to describe attribute is column
+  an attribute is a label used for data types with related values. anothe word to describe attribute is column
 
 ## Notes
 
