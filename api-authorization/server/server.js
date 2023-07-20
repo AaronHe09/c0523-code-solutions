@@ -110,7 +110,7 @@ app.post('/api/entries', authMiddleware, async (req, res, next) => {
   }
 });
 
-app.put('/api/entries/:entryId', async (req, res, next) => {
+app.put('/api/entries/:entryId', authMiddleware, async (req, res, next) => {
   try {
     if (!req.user) {
       throw new ClientError(401, 'not logged in');
@@ -143,7 +143,7 @@ app.put('/api/entries/:entryId', async (req, res, next) => {
   }
 });
 
-app.delete('/api/entries/:entryId', async (req, res, next) => {
+app.delete('/api/entries/:entryId', authMiddleware, async (req, res, next) => {
   try {
     if (!req.user) {
       throw new ClientError(401, 'not logged in');

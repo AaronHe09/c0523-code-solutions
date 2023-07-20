@@ -6,7 +6,7 @@ export function authMiddleware(req, res, next) {
   /* your code here */
   const auth = req.get('Authorization');
   const token = auth.split('Bearer ')[1];
-  if (!token) throw new ClientError(401, 'authentication required');
+  if (!token || !auth) throw new ClientError(401, 'authentication required');
   const payload = jwt.verify(token, process.env.TOKEN_SECRET);
   req.user = payload;
   next();
