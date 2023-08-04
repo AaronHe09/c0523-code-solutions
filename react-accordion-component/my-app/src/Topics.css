@@ -1,0 +1,18 @@
+.topics-container {
+  width: 300px;
+  padding: 1rem;
+}
+
+.topic-button {
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: start;
+  font-weight: bold;
+}
+
+p {
+  border: 1px solid black;
+  margin: 0;
+  padding: 0.3rem;
+  font-size: 0.8rem;
+}
